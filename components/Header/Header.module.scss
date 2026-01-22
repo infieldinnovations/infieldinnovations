@@ -1,0 +1,190 @@
+.headerPlaceholder {
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  height: 120px;
+}
+
+.topBar {
+  background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+  color: white;
+  padding: 8px 0;
+  font-size: 14px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.navbar {
+  padding: 15px 0;
+  background: white;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: auto;
+  max-height: 50px;
+  width: auto;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.navLink {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: #1e40af;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: #1e40af;
+    transition: all 0.3s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.quoteButton {
+  background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(30, 64, 175, 0.3);
+  }
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: #374151;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  overflow: hidden;
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.mobileMenuContent {
+  padding: 20px;
+}
+
+.mobileNavLink {
+  display: block;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1e40af;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.mobileQuoteButton {
+  display: block;
+  background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
+  }
+}
