@@ -16,7 +16,7 @@ body {
 }
 
 
-// Custom Swiper Navigation Styles
+// Custom Swiper Navigation Styles ---- Hero Carousel
 :global(.swiper-button-next),
 :global(.swiper-button-prev) {
   color: white !important;
@@ -73,3 +73,5 @@ body {
     bottom: 20px !important;
   }
 }
+
+
