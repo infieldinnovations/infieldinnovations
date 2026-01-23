@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2>Why Choose AquaPlumb Innovations?</h2>
+          <h2>Why Choose Infield Innovations?</h2>
           <p>We deliver exceptional results with unmatched expertise and dedication</p>
         </motion.div>
 
