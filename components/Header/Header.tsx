@@ -49,7 +49,7 @@ const Header = () => {
               <Link href="/" className={styles.logo}>
                 <Image
                   src="https://hdwifbsurncntfwwmadt.supabase.co/storage/v1/object/public/website_general/logo.png"
-                  alt="AquaPlumb Innovations Limited"
+                  alt="Infield Innovations Limited"
                   width={180}
                   height={60}
                   className={styles.logoImage}

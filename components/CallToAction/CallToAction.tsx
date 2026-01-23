@@ -55,7 +55,7 @@ const CallToAction = () => {
           >
             <div className={styles.ctaCard}>
               <h3>Get Your Free Quote Today</h3>
-              <p>Join 500+ satisfied customers who trust AquaPlumb Innovations</p>
+              <p>Join 500+ satisfied customers who trust Infield Innovations</p>
               
               <div className={styles.buttonGroup}>
                 <Link href="/quote" className={styles.primaryButton}>
@@ -69,7 +69,7 @@ const CallToAction = () => {
                     <span>Call Now</span>
                   </a>
                   
-                  <a href="mailto:info@aquaplumbinnovations.com" className={styles.contactButton}>
+                  <a href="mailto:info@infieldinnovations.com" className={styles.contactButton}>
                     <Mail size={18} />
                     <span>Email Us</span>
                   </a>

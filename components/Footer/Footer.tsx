@@ -35,7 +35,7 @@ const Footer = () => {
             <div className={styles.logo}>
               <Image
                 src="https://hdwifbsurncntfwwmadt.supabase.co/storage/v1/object/public/website_general/logo.png"
-                alt="AquaPlumb Innovations Limited"
+                alt="Infield Innovations Limited"
                 width={200}
                 height={60}
                 className={styles.logoImage}
@@ -101,7 +101,7 @@ const Footer = () => {
               </div>
               <div className={styles.contactItem}>
                 <Mail size={16} />
-                <a href="mailto:info@aquaplumbinnovations.com">info@aquaplumbinnovations.com</a>
+                <a href="mailto:info@infieldinnovations.com">info@infieldinnovations.com</a>
               </div>
               <div className={styles.contactItem}>
                 <Clock size={16} />
@@ -113,7 +113,7 @@ const Footer = () => {
 
         <div className={styles.footerBottom}>
           <div className={styles.bottomContent}>
-            <p>&copy; {currentYear} AquaPlumb Innovations Limited. All rights reserved.</p>
+            <p>&copy; {currentYear} Infield Innovations Limited. All rights reserved.</p>
             <div className={styles.bottomLinks}>
               <Link href="/privacy" className={styles.bottomLink}>Privacy Policy</Link>
               <Link href="/terms" className={styles.bottomLink}>Terms of Service</Link>

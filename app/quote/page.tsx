@@ -62,7 +62,7 @@ const QuotePage = () => {
           >
             <div className={styles.successIcon}>✓</div>
             <h2>Quote Request Submitted Successfully!</h2>
-            <p>Thank you for choosing AquaPlumb Innovations. Our team will review your request and contact you within 24 hours.</p>
+            <p>Thank you for choosing Infield Innovations. Our team will review your request and contact you within 24 hours.</p>
           </motion.div>
         </div>
       </div>
@@ -245,7 +245,7 @@ const QuotePage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className={styles.infoCard}>
-              <h3>Why Choose AquaPlumb Innovations?</h3>
+              <h3>Why Choose Infield Innovations?</h3>
               <ul>
                 <li>✓ Over 10 years of experience</li>
                 <li>✓ Licensed and certified professionals</li>
@@ -269,7 +269,7 @@ const QuotePage = () => {
                 <Mail size={20} />
                 <div>
                   <strong>Email</strong>
-                  <p>info@aquaplumbinnovations.com</p>
+                  <p>info@infieldinnovations.com</p>
                 </div>
               </div>
               <div className={styles.contactItem}>

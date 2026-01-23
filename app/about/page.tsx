@@ -85,7 +85,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1>About AquaPlumb Innovations</h1>
+              <h1>About Infield Innovations</h1>
               <p className={styles.heroSubtitle}>
                 Leading the way in sustainable water and energy solutions across
                 Kenya

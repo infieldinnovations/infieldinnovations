@@ -8,12 +8,12 @@ import Footer from "@/components/Footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AquaPlumb Innovations",
+  title: "Infield Innovations",
   description:
     "Professional solar installation, plumbing services, borehole drilling, and irrigation design & installation. Expert water and energy solutions in Kenya.",
   keywords:
     "solar installation, plumbing services, borehole drilling, irrigation systems, water solutions, renewable energy, Kenya",
-  authors: [{ name: "AquaPlumb Innovations Limited" }],
+  authors: [{ name: "Infield Innovations Limited" }],
 };
 
 export const viewport = {
