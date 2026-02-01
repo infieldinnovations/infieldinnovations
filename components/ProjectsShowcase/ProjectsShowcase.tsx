@@ -35,9 +35,11 @@ const ProjectsShowcase = () => {
       description:
         "Complete 5kW solar system installation with battery backup for a modern home in Karen.",
       images: [
-        "https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-        "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-        "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        "/solar/solar-residence-35656876.jpg",
+        "/solar/solar-residence-876545234.jpg",
+        "/solar/solar-residence-645t7465876.jpg",
+        "/solar/solar-residence-213123.jpg",
+        "/solar/solar-residence-786463e52r.jpg",
       ],
       features: [
         "5kW Solar System",

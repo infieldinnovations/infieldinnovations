@@ -1,73 +1,84 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Sun, Droplets, Zap, Sprout, ArrowRight, CircleCheck as CheckCircle } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './ServicesOverview.module.scss';
+import { motion } from "framer-motion";
+import {
+  Sun,
+  Droplets,
+  Zap,
+  Sprout,
+  ArrowRight,
+  CircleCheck as CheckCircle,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./ServicesOverview.module.scss";
 
 const ServicesOverview = () => {
   const services = [
     {
-      id: 'solar',
-      title: 'Solar Solutions',
-      description: 'Complete solar installation services from residential to commercial systems, including design, installation, and maintenance.',
+      id: "solar",
+      title: "Solar Solutions",
+      description:
+        "Complete solar installation services from residential to commercial systems, including design, installation, and maintenance.",
       icon: <Sun size={48} />,
-      image: 'https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: "/solar/solar_8485362.jpg",
       features: [
-        'System Design & Sizing',
-        'Residential & Commercial Installation',
-        'Solar Water Heating',
-        'Battery Storage Systems',
-        'Maintenance & Monitoring'
+        "System Design & Sizing",
+        "Residential & Commercial Installation",
+        "Solar Water Heating",
+        "Battery Storage Systems",
+        "Maintenance & Monitoring",
       ],
-      color: '#fbbf24'
+      color: "#fbbf24",
     },
     {
-      id: 'plumbing',
-      title: 'Plumbing Services',
-      description: 'Professional plumbing solutions for all your water and drainage needs, from installations to emergency repairs.',
+      id: "plumbing",
+      title: "Plumbing Services",
+      description:
+        "Professional plumbing solutions for all your water and drainage needs, from installations to emergency repairs.",
       icon: <Droplets size={48} />,
-      image: 'https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: "/plumbing/plumbing_279876362.jpg",
       features: [
-        'Fixture Installation & Repair',
-        'Pipe Installation & Repiping',
-        'Water Supply Systems',
-        'Drainage & Sewer Systems',
-        'Emergency Plumbing Services'
+        "Fixture Installation & Repair",
+        "Pipe Installation & Repiping",
+        "Water Supply Systems",
+        "Drainage & Sewer Systems",
+        "Emergency Plumbing Services",
       ],
-      color: '#1e40af'
+      color: "#1e40af",
     },
     {
-      id: 'borehole',
-      title: 'Borehole Drilling',
-      description: 'Professional borehole drilling, development, and maintenance services to ensure reliable water supply.',
+      id: "borehole",
+      title: "Borehole Solutions",
+      description:
+        "Professional borehole drilling, development, and maintenance services to ensure reliable water supply.",
       icon: <Zap size={48} />,
-      image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: "/borehole/borehole_215637822.jpg",
       features: [
-        'Hydrogeological Surveying',
-        'Drilling & Casing Installation',
-        'Pump Installation & Repair',
-        'Water Quality Testing',
-        'Borehole Maintenance'
+        "Hydrogeological Surveying",
+        "Drilling & Casing Installation",
+        "Pump Installation & Repair",
+        "Water Quality Testing",
+        "Borehole Maintenance",
       ],
-      color: '#0891b2'
+      color: "#0891b2",
     },
     {
-      id: 'irrigation',
-      title: 'Irrigation Systems',
-      description: 'Smart irrigation design and installation for efficient water management in agriculture and landscaping.',
+      id: "irrigation",
+      title: "Irrigation Systems",
+      description:
+        "Smart irrigation design and installation for efficient water management in agriculture and landscaping.",
       icon: <Sprout size={48} />,
-      image: 'https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: "/irrigation/irrigation_324628q798.jpg",
       features: [
-        'System Design & Planning',
-        'Pipe Network Installation',
-        'Pressure Control Systems',
-        'Filtration & Water Treatment',
-        'Maintenance & Optimization'
+        "System Design & Planning",
+        "Pipe Network Installation",
+        "Pressure Control Systems",
+        "Filtration & Water Treatment",
+        "Maintenance & Optimization",
       ],
-      color: '#10b981'
-    }
+      color: "#10b981",
+    },
   ];
 
   return (
@@ -103,7 +114,7 @@ const ServicesOverview = () => {
                   className={styles.serviceImage}
                 />
                 <div className={styles.imageOverlay}>
-                  <div 
+                  <div
                     className={styles.iconWrapper}
                     style={{ backgroundColor: service.color }}
                   >
@@ -125,7 +136,7 @@ const ServicesOverview = () => {
                   ))}
                 </ul>
 
-                <Link 
+                <Link
                   href={`/services/${service.id}`}
                   className={styles.serviceButton}
                   style={{ backgroundColor: service.color }}
@@ -146,7 +157,10 @@ const ServicesOverview = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3>Need a Custom Solution?</h3>
-          <p>Our experts are ready to design the perfect system for your specific needs</p>
+          <p>
+            Our experts are ready to design the perfect system for your specific
+            needs
+          </p>
           <Link href="/quote" className={styles.ctaButton}>
             Get Your Free Consultation
             <ArrowRight size={20} />

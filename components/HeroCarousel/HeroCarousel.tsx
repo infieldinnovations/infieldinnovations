@@ -1,3 +1,5 @@
+// components\HeroCarousel\HeroCarousel.tsx
+
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +25,7 @@ const HeroCarousel = () => {
       subtitle: "Harness the Power of the Sun",
       description:
         "Complete solar installation services from design to maintenance. Reduce energy costs with our cutting-edge solar technology.",
-      image: "/solar/solar_desert.jpg",
+      image: "/solar/solar_9283740293.jpg",
       icon: <Sun size={60} />,
       buttonText: "Explore Solar Services",
       buttonLink: "/services/solar",
@@ -34,8 +36,7 @@ const HeroCarousel = () => {
       subtitle: "Quality Water Solutions",
       description:
         "From installation to emergency repairs, our certified plumbers deliver reliable and efficient plumbing solutions.",
-      image:
-        "https://images.pexels.com/photos/5691624/pexels-photo-5691624.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      image: "/plumbing/plumbing_974038490.jpg",
       icon: <Droplets size={60} />,
       buttonText: "View Plumbing Services",
       buttonLink: "/services/plumbing",
@@ -46,8 +47,7 @@ const HeroCarousel = () => {
       subtitle: "Access to Clean Water",
       description:
         "Professional borehole drilling, testing, and maintenance services. Ensure reliable water supply with our expertise.",
-      image:
-        "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      image: "/borehole/borehole_246374627.jpg",
       icon: <Zap size={60} />,
       buttonText: "Learn About Boreholes",
       buttonLink: "/services/borehole",
@@ -58,8 +58,7 @@ const HeroCarousel = () => {
       subtitle: "Smart Water Management",
       description:
         "Efficient irrigation systems designed for agricultural and landscaping needs. Maximize water efficiency and crop yield.",
-      image:
-        "https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      image: "/irrigation/irrigation_489637824.jpg",
       icon: <Sprout size={60} />,
       buttonText: "Discover Irrigation",
       buttonLink: "/services/irrigation",
