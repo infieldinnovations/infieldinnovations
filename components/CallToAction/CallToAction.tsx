@@ -1,16 +1,21 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Phone, Mail, ArrowRight, CircleCheck as CheckCircle } from 'lucide-react';
-import Link from 'next/link';
-import styles from './CallToAction.module.scss';
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  ArrowRight,
+  CircleCheck as CheckCircle,
+} from "lucide-react";
+import Link from "next/link";
+import styles from "./CallToAction.module.scss";
 
 const CallToAction = () => {
   const benefits = [
-    'Free consultation and site visit',
-    'Transparent pricing with no hidden costs',
-    'Licensed and insured professionals',
-    'Quality guarantee on all work'
+    "Free consultation and site visit",
+    "Transparent pricing with no hidden costs",
+    "Licensed and insured professionals",
+    "Quality guarantee on all work",
   ];
 
   return (
@@ -26,10 +31,10 @@ const CallToAction = () => {
           >
             <h2>Ready to Get Started?</h2>
             <p className={styles.subtitle}>
-              Transform your property with our expert water and energy solutions. 
-              Contact us today for a free consultation.
+              Transform your property with our expert water and energy
+              solutions. Contact us today for a free consultation.
             </p>
-            
+
             <ul className={styles.benefitsList}>
               {benefits.map((benefit, index) => (
                 <motion.li
@@ -55,27 +60,30 @@ const CallToAction = () => {
           >
             <div className={styles.ctaCard}>
               <h3>Get Your Free Quote Today</h3>
-              <p>Join 500+ satisfied customers who trust AquaPlumb Innovations</p>
-              
+              <p>Join 500+ satisfied customers who trust Infield Innovations</p>
+
               <div className={styles.buttonGroup}>
                 <Link href="/quote" className={styles.primaryButton}>
                   Request Quote
                   <ArrowRight size={20} />
                 </Link>
-                
+
                 <div className={styles.contactOptions}>
                   <a href="tel:+254700000000" className={styles.contactButton}>
                     <Phone size={18} />
                     <span>Call Now</span>
                   </a>
-                  
-                  <a href="mailto:info@aquaplumbinnovations.com" className={styles.contactButton}>
+
+                  <a
+                    href="mailto:info@Infieldinnovations.com"
+                    className={styles.contactButton}
+                  >
                     <Mail size={18} />
                     <span>Email Us</span>
                   </a>
                 </div>
               </div>
-              
+
               <div className={styles.guarantee}>
                 <div className={styles.guaranteeIcon}>✓</div>
                 <div className={styles.guaranteeText}>

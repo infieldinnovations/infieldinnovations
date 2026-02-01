@@ -1,54 +1,60 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Award, Users, Clock, Shield, Wrench, ThumbsUp } from 'lucide-react';
-import styles from './WhyChooseUs.module.scss';
+import { motion } from "framer-motion";
+import { Award, Users, Clock, Shield, Wrench, ThumbsUp } from "lucide-react";
+import styles from "./WhyChooseUs.module.scss";
 
 const WhyChooseUs = () => {
   const features = [
     {
       icon: <Award size={48} />,
-      title: 'Expert Experience',
-      description: '10+ years of proven excellence in water and energy solutions across Kenya',
-      color: '#fbbf24'
+      title: "Expert Experience",
+      description:
+        "10+ years of proven excellence in water and energy solutions across Kenya",
+      color: "#fbbf24",
     },
     {
       icon: <Users size={48} />,
-      title: 'Professional Team',
-      description: 'Licensed and certified technicians with extensive training and experience',
-      color: '#1e40af'
+      title: "Professional Team",
+      description:
+        "Licensed and certified technicians with extensive training and experience",
+      color: "#1e40af",
     },
     {
       icon: <Clock size={48} />,
-      title: '24/7 Support',
-      description: 'Round-the-clock emergency services and customer support when you need it',
-      color: '#0891b2'
+      title: "24/7 Support",
+      description:
+        "Round-the-clock emergency services and customer support when you need it",
+      color: "#0891b2",
     },
     {
       icon: <Shield size={48} />,
-      title: 'Quality Guarantee',
-      description: 'Comprehensive warranty and guarantee on all our installations and services',
-      color: '#10b981'
+      title: "Quality Guarantee",
+      description:
+        "Comprehensive warranty and guarantee on all our installations and services",
+      color: "#10b981",
     },
     {
       icon: <Wrench size={48} />,
-      title: 'Advanced Equipment',
-      description: 'State-of-the-art tools and equipment for efficient and precise work',
-      color: '#dc2626'
+      title: "Advanced Equipment",
+      description:
+        "State-of-the-art tools and equipment for efficient and precise work",
+      color: "#dc2626",
     },
     {
       icon: <ThumbsUp size={48} />,
-      title: 'Customer Satisfaction',
-      description: '500+ satisfied customers with excellent reviews and testimonials',
-      color: '#7c3aed'
-    }
+      title: "Customer Satisfaction",
+      description:
+        "500+ satisfied customers with excellent reviews and testimonials",
+      color: "#7c3aed",
+    },
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '10+', label: 'Years Experience' },
-    { number: '100%', label: 'Customer Satisfaction' },
-    { number: '24/7', label: 'Support Available' }
+    { number: "500+", label: "Projects Completed" },
+    { number: "10+", label: "Years Experience" },
+    { number: "100%", label: "Customer Satisfaction" },
+    { number: "24/7", label: "Support Available" },
   ];
 
   return (
@@ -61,8 +67,11 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2>Why Choose AquaPlumb Innovations?</h2>
-          <p>We deliver exceptional results with unmatched expertise and dedication</p>
+          <h2>Why Choose Infield Innovations?</h2>
+          <p>
+            We deliver exceptional results with unmatched expertise and
+            dedication
+          </p>
         </motion.div>
 
         <div className={styles.content}>
@@ -83,7 +92,7 @@ const WhyChooseUs = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div 
+                <div
                   className={styles.iconWrapper}
                   style={{ backgroundColor: feature.color }}
                 >

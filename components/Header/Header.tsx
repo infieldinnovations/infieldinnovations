@@ -15,6 +15,7 @@ const Header = () => {
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
     { href: "/projects", label: "Completed Projects" },
+    { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -24,64 +25,52 @@ const Header = () => {
       <div className={styles.header}>
         {/* Top Bar */}
         <div className={styles.topBar}>
-          <div className={styles.container}>
-            <div className={styles.contactInfo}>
-              <a href="tel:+254702393677" className={styles.contactLink}>
-                <Phone size={14} />
-                <span>+254 702 393 677</span>
-              </a>
-              <a
-                href="mailto:info@infieldinnovations.com"
-                className={styles.contactLink}
-              >
-                <Mail size={14} />
-                <span>info@infieldinnovations.com</span>
-              </a>
-            </div>
-          </div>
+          <a href="tel:+254702393677" className={styles.contactLink}>
+            <Phone size={14} />
+            <span>+254 702 393 677</span>
+          </a>
+          <a
+            href="mailto:info@infieldinnovations.com"
+            className={styles.contactLink}
+          >
+            <Mail size={14} />
+            <span>info@infieldinnovations.com</span>
+          </a>
         </div>
 
         {/* Main Navigation */}
         <nav className={styles.navbar}>
-          <div className={styles.container}>
-            <div className={styles.navContent}>
-              {/* Logo */}
-              <Link href="/" className={styles.logo}>
-                <Image
-                  src="https://hdwifbsurncntfwwmadt.supabase.co/storage/v1/object/public/website_general/logo.png"
-                  alt="AquaPlumb Innovations Limited"
-                  width={180}
-                  height={60}
-                  className={styles.logoImage}
-                />
+          {/* Logo */}
+          <Link href="/" className={styles.logo}>
+            <Image
+              src="/logo.png"
+              alt="Infield Innovations Limited"
+              width={200}
+              height={90}
+              className={styles.logoImage}
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className={styles.desktopNav}>
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} className={styles.navLink}>
+                {item.label}
               </Link>
-
-              {/* Desktop Navigation */}
-              <div className={styles.desktopNav}>
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={styles.navLink}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <Link href="/quote" className={styles.quoteButton}>
-                  Quick Quote
-                </Link>
-              </div>
-
-              {/* Mobile Menu Button */}
-              <button
-                className={styles.mobileMenuButton}
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle menu"
-              >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+            ))}
+            <Link href="/quote" className={styles.quoteButton}>
+              Quick Quote
+            </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className={styles.mobileMenuButton}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </nav>
 
         {/* Mobile Menu */}

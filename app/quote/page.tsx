@@ -1,23 +1,25 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import styles from './Quote.module.scss';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+import styles from "./Quote.module.scss";
 
 const quoteSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  service: z.string().min(1, 'Please select a service'),
-  location: z.string().min(5, 'Location must be at least 5 characters'),
-  projectDescription: z.string().min(20, 'Project description must be at least 20 characters'),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  phone: z.string().min(10, "Phone number must be at least 10 digits"),
+  service: z.string().min(1, "Please select a service"),
+  location: z.string().min(5, "Location must be at least 5 characters"),
+  projectDescription: z
+    .string()
+    .min(20, "Project description must be at least 20 characters"),
   budget: z.string().optional(),
-  timeline: z.string().min(1, 'Please select a timeline'),
-  contactPreference: z.string().min(1, 'Please select a contact preference'),
+  timeline: z.string().min(1, "Please select a timeline"),
+  contactPreference: z.string().min(1, "Please select a contact preference"),
 });
 
 type QuoteFormData = z.infer<typeof quoteSchema>;
@@ -37,15 +39,15 @@ const QuotePage = () => {
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    
-    console.log('Quote request submitted:', data);
+
+    console.log("Quote request submitted:", data);
     setIsSubmitted(true);
     setIsSubmitting(false);
     reset();
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
@@ -62,7 +64,10 @@ const QuotePage = () => {
           >
             <div className={styles.successIcon}>✓</div>
             <h2>Quote Request Submitted Successfully!</h2>
-            <p>Thank you for choosing AquaPlumb Innovations. Our team will review your request and contact you within 24 hours.</p>
+            <p>
+              Thank you for choosing Infield Innovations. Our team will review
+              your request and contact you within 24 hours.
+            </p>
           </motion.div>
         </div>
       </div>
@@ -79,7 +84,10 @@ const QuotePage = () => {
           transition={{ duration: 0.6 }}
         >
           <h1>Get Your Free Quote</h1>
-          <p>Tell us about your project and we'll provide you with a detailed estimate</p>
+          <p>
+            Tell us about your project and we'll provide you with a detailed
+            estimate
+          </p>
         </motion.div>
 
         <div className={styles.content}>
@@ -95,11 +103,15 @@ const QuotePage = () => {
                 <input
                   id="name"
                   type="text"
-                  {...register('name')}
-                  className={errors.name ? styles.error : ''}
+                  {...register("name")}
+                  className={errors.name ? styles.error : ""}
                   placeholder="Enter your full name"
                 />
-                {errors.name && <span className={styles.errorMessage}>{errors.name.message}</span>}
+                {errors.name && (
+                  <span className={styles.errorMessage}>
+                    {errors.name.message}
+                  </span>
+                )}
               </div>
 
               <div className={styles.formRow}>
@@ -108,11 +120,15 @@ const QuotePage = () => {
                   <input
                     id="email"
                     type="email"
-                    {...register('email')}
-                    className={errors.email ? styles.error : ''}
+                    {...register("email")}
+                    className={errors.email ? styles.error : ""}
                     placeholder="your.email@example.com"
                   />
-                  {errors.email && <span className={styles.errorMessage}>{errors.email.message}</span>}
+                  {errors.email && (
+                    <span className={styles.errorMessage}>
+                      {errors.email.message}
+                    </span>
+                  )}
                 </div>
 
                 <div className={styles.formGroup}>
@@ -120,11 +136,15 @@ const QuotePage = () => {
                   <input
                     id="phone"
                     type="tel"
-                    {...register('phone')}
-                    className={errors.phone ? styles.error : ''}
+                    {...register("phone")}
+                    className={errors.phone ? styles.error : ""}
                     placeholder="+254 700 000 000"
                   />
-                  {errors.phone && <span className={styles.errorMessage}>{errors.phone.message}</span>}
+                  {errors.phone && (
+                    <span className={styles.errorMessage}>
+                      {errors.phone.message}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -133,8 +153,8 @@ const QuotePage = () => {
                   <label htmlFor="service">Service Required *</label>
                   <select
                     id="service"
-                    {...register('service')}
-                    className={errors.service ? styles.error : ''}
+                    {...register("service")}
+                    className={errors.service ? styles.error : ""}
                   >
                     <option value="">Select a service</option>
                     <option value="solar">Solar Installation</option>
@@ -142,7 +162,11 @@ const QuotePage = () => {
                     <option value="borehole">Borehole Drilling</option>
                     <option value="irrigation">Irrigation Systems</option>
                   </select>
-                  {errors.service && <span className={styles.errorMessage}>{errors.service.message}</span>}
+                  {errors.service && (
+                    <span className={styles.errorMessage}>
+                      {errors.service.message}
+                    </span>
+                  )}
                 </div>
 
                 <div className={styles.formGroup}>
@@ -150,30 +174,40 @@ const QuotePage = () => {
                   <input
                     id="location"
                     type="text"
-                    {...register('location')}
-                    className={errors.location ? styles.error : ''}
+                    {...register("location")}
+                    className={errors.location ? styles.error : ""}
                     placeholder="City, County"
                   />
-                  {errors.location && <span className={styles.errorMessage}>{errors.location.message}</span>}
+                  {errors.location && (
+                    <span className={styles.errorMessage}>
+                      {errors.location.message}
+                    </span>
+                  )}
                 </div>
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="projectDescription">Project Description *</label>
+                <label htmlFor="projectDescription">
+                  Project Description *
+                </label>
                 <textarea
                   id="projectDescription"
                   rows={5}
-                  {...register('projectDescription')}
-                  className={errors.projectDescription ? styles.error : ''}
+                  {...register("projectDescription")}
+                  className={errors.projectDescription ? styles.error : ""}
                   placeholder="Please provide details about your project requirements, size, specifications, etc."
                 />
-                {errors.projectDescription && <span className={styles.errorMessage}>{errors.projectDescription.message}</span>}
+                {errors.projectDescription && (
+                  <span className={styles.errorMessage}>
+                    {errors.projectDescription.message}
+                  </span>
+                )}
               </div>
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="budget">Budget Range (Optional)</label>
-                  <select id="budget" {...register('budget')}>
+                  <select id="budget" {...register("budget")}>
                     <option value="">Select budget range</option>
                     <option value="under-50k">Under KES 50,000</option>
                     <option value="50k-100k">KES 50,000 - 100,000</option>
@@ -188,8 +222,8 @@ const QuotePage = () => {
                   <label htmlFor="timeline">Project Timeline *</label>
                   <select
                     id="timeline"
-                    {...register('timeline')}
-                    className={errors.timeline ? styles.error : ''}
+                    {...register("timeline")}
+                    className={errors.timeline ? styles.error : ""}
                   >
                     <option value="">Select timeline</option>
                     <option value="urgent">ASAP (Urgent)</option>
@@ -198,16 +232,22 @@ const QuotePage = () => {
                     <option value="2-3months">2-3 months</option>
                     <option value="flexible">Flexible</option>
                   </select>
-                  {errors.timeline && <span className={styles.errorMessage}>{errors.timeline.message}</span>}
+                  {errors.timeline && (
+                    <span className={styles.errorMessage}>
+                      {errors.timeline.message}
+                    </span>
+                  )}
                 </div>
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="contactPreference">Preferred Contact Method *</label>
+                <label htmlFor="contactPreference">
+                  Preferred Contact Method *
+                </label>
                 <select
                   id="contactPreference"
-                  {...register('contactPreference')}
-                  className={errors.contactPreference ? styles.error : ''}
+                  {...register("contactPreference")}
+                  className={errors.contactPreference ? styles.error : ""}
                 >
                   <option value="">Select contact preference</option>
                   <option value="phone">Phone Call</option>
@@ -215,7 +255,11 @@ const QuotePage = () => {
                   <option value="whatsapp">WhatsApp</option>
                   <option value="both">Phone & Email</option>
                 </select>
-                {errors.contactPreference && <span className={styles.errorMessage}>{errors.contactPreference.message}</span>}
+                {errors.contactPreference && (
+                  <span className={styles.errorMessage}>
+                    {errors.contactPreference.message}
+                  </span>
+                )}
               </div>
 
               <button
@@ -245,7 +289,7 @@ const QuotePage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className={styles.infoCard}>
-              <h3>Why Choose AquaPlumb Innovations?</h3>
+              <h3>Why Choose Infield Innovations?</h3>
               <ul>
                 <li>✓ Over 10 years of experience</li>
                 <li>✓ Licensed and certified professionals</li>
@@ -269,7 +313,7 @@ const QuotePage = () => {
                 <Mail size={20} />
                 <div>
                   <strong>Email</strong>
-                  <p>info@aquaplumbinnovations.com</p>
+                  <p>info@Infieldinnovations.com</p>
                 </div>
               </div>
               <div className={styles.contactItem}>

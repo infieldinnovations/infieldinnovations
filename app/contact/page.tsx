@@ -58,10 +58,10 @@ const ContactPage = () => {
       icon: <Mail size={24} />,
       title: "Email",
       details: [
-        "info@aquaplumbinnovations.com",
-        "support@aquaplumbinnovations.com",
+        "info@Infieldinnovations.com",
+        "support@Infieldinnovations.com",
       ],
-      action: "mailto:info@aquaplumbinnovations.com",
+      action: "mailto:info@Infieldinnovations.com",
     },
     {
       icon: <MapPin size={24} />,
@@ -103,7 +103,7 @@ const ContactPage = () => {
             <div className={styles.successIcon}>✓</div>
             <h2>Message Sent Successfully!</h2>
             <p>
-              Thank you for contacting AquaPlumb Innovations. We'll get back to
+              Thank you for contacting Infield Innovations. We'll get back to
               you within 24 hours.
             </p>
           </motion.div>

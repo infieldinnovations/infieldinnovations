@@ -18,7 +18,7 @@ const Reviews = () => {
       service: "Solar Installation",
       rating: 5,
       review:
-        "AquaPlumb Innovations transformed our home with their solar installation. The team was professional, efficient, and the system has exceeded our expectations. Our electricity bills have dropped by 90%!",
+        "Infield Innovations transformed our home with their solar installation. The team was professional, efficient, and the system has exceeded our expectations. Our electricity bills have dropped by 90%!",
       avatar:
         "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
       date: "December 2024",

@@ -1,29 +1,38 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import styles from './Footer.module.scss';
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    'Solar Installation',
-    'Plumbing Services',
-    'Borehole Drilling',
-    'Irrigation Systems',
-    'Water Treatment',
-    'Solar Water Heating'
+    "Solar Installation",
+    "Plumbing Services",
+    "Borehole Drilling",
+    "Irrigation Systems",
+    "Water Treatment",
+    "Solar Water Heating",
   ];
 
   const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
-    { href: '/services', label: 'Services' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/quote', label: 'Get Quote' }
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+    { href: "/quote", label: "Get Quote" },
   ];
 
   return (
@@ -35,15 +44,16 @@ const Footer = () => {
             <div className={styles.logo}>
               <Image
                 src="https://hdwifbsurncntfwwmadt.supabase.co/storage/v1/object/public/website_general/logo.png"
-                alt="AquaPlumb Innovations Limited"
+                alt="Infield Innovations Limited"
                 width={200}
                 height={60}
                 className={styles.logoImage}
               />
             </div>
             <p className={styles.description}>
-              Leading provider of innovative water and energy solutions. We specialize in solar installation, 
-              plumbing services, borehole drilling, and irrigation systems across Kenya.
+              Leading provider of innovative water and energy solutions. We
+              specialize in solar installation, plumbing services, borehole
+              drilling, and irrigation systems across Kenya.
             </p>
             <div className={styles.socialLinks}>
               <a href="#" className={styles.socialLink} aria-label="Facebook">
@@ -101,7 +111,9 @@ const Footer = () => {
               </div>
               <div className={styles.contactItem}>
                 <Mail size={16} />
-                <a href="mailto:info@aquaplumbinnovations.com">info@aquaplumbinnovations.com</a>
+                <a href="mailto:info@Infieldinnovations.com">
+                  info@Infieldinnovations.com
+                </a>
               </div>
               <div className={styles.contactItem}>
                 <Clock size={16} />
@@ -113,10 +125,17 @@ const Footer = () => {
 
         <div className={styles.footerBottom}>
           <div className={styles.bottomContent}>
-            <p>&copy; {currentYear} AquaPlumb Innovations Limited. All rights reserved.</p>
+            <p>
+              &copy; {currentYear} Infield Innovations Limited. All rights
+              reserved.
+            </p>
             <div className={styles.bottomLinks}>
-              <Link href="/privacy" className={styles.bottomLink}>Privacy Policy</Link>
-              <Link href="/terms" className={styles.bottomLink}>Terms of Service</Link>
+              <Link href="/privacy" className={styles.bottomLink}>
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className={styles.bottomLink}>
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
