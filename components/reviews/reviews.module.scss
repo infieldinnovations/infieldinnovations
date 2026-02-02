@@ -11,7 +11,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at 20% 80%,
         rgba(30, 64, 175, 0.05) 0%,
         transparent 50%
@@ -105,7 +106,7 @@
 
 .reviewWrapper {
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   min-height: 400px;
   display: flex;
@@ -117,7 +118,6 @@
 }
 
 .reviewCard {
-  background: white;
   border-radius: 24px;
   padding: 50px 40px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -127,6 +127,7 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  overflow: visible;
 
   @media (max-width: 768px) {
     padding: 40px 25px;
@@ -139,7 +140,7 @@
 
 .quoteIcon {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
@@ -151,6 +152,7 @@
   justify-content: center;
   color: white;
   box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+  z-index: 24565;
 
   @media (max-width: 768px) {
     width: 50px;
